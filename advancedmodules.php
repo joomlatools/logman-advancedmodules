@@ -14,67 +14,9 @@
  */
 class PlgLogmanAdvancedmodules extends ComLogmanPluginJoomla
 {
-    public function onExtensionAfterSave($context, $data, $isNew)
+    protected function _initialize(KObjectConfig $config)
     {
-        $dispatcher = AdvancedModulesEventDispatcher::getInstance();
-
-        if ($plugin = $dispatcher->getPlugin('PlgLogmanModules')) {
-            $plugin->onExtensionAfterSave('com_modules.module', $data, $isNew); // Forward event
-        }
-    }
-
-    public function onExtensionAfterDelete($context, $data)
-    {
-        $dispatcher = AdvancedModulesEventDispatcher::getInstance();
-
-        if ($plugin = $dispatcher->getPlugin('PlgLogmanModules')) {
-            $plugin->onExtensionAfterDelete('com_modules.module', $data); // Forward event
-        }
-    }
-
-    public function onContentChangeState($context, $pks, $state)
-    {
-        $dispatcher = AdvancedModulesEventDispatcher::getInstance();
-
-        if ($plugin = $dispatcher->getPlugin('PlgLogmanModules')) {
-            $plugin->onContentChangeState('com_modules.module', $pks, $state); // Forward event
-        }
-    }
-}
-
-class AdvancedModulesEventDispatcher extends JEventDispatcher
-{
-    static protected $_instance;
-
-    static public function getInstance()
-    {
-        if (!self::$_instance instanceof  self) {
-            self::$_instance = new self();
-        }
-
-        return self::$_instance;
-    }
-
-    /**
-     * Plugin getter.
-     *
-     * @param string $name The name of the plugin.
-     * @return JPlugin|null Returns the plugin, null if the plugin is not found.
-     */
-    public function getPlugin($name)
-    {
-        $plugin = null;
-
-        $dispatcher = self::$instance;
-
-        foreach ($dispatcher->_observers as $observer)
-        {
-            if (is_object($observer) && get_class($observer) == $name) {
-                $plugin = $observer;
-                break;
-            }
-        }
-
-        return $plugin;
+        $config->append(array('resources' => array('module')));
+        parent::_initialize($config);
     }
 }
