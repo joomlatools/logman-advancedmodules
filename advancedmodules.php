@@ -14,9 +14,4 @@
  */
 class PlgLogmanAdvancedmodules extends ComLogmanPluginJoomla
 {
-    protected function _initialize(KObjectConfig $config)
-    {
-        $config->append(array('resources' => array('module')));
-        parent::_initialize($config);
-    }
 }

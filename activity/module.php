@@ -25,7 +25,7 @@ class PlgLogmanAdvancedmodulesActivityModule extends ComLogmanModelEntityActivit
         $component = JComponentHelper::getComponent('com_advancedmodules', true);
 
         if (!$component->enabled) {
-            $config->append(array('url' => 'option=com_modules&task=module.edit&id=' . $this->row));
+            $config->append(array('url' => array('admin' => 'option=com_modules&task=module.edit&id=' . $this->row)));
         }
 
         parent::_objectConfig($config);

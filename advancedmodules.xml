@@ -3,7 +3,7 @@
     <identifier>plg:logman.advancedmodulemanager</identifier>
     <name>plg_logman_advancedmodules</name>
     <author>Joomlatools</author>
-    <creationDate>March 2016</creationDate>
+    <creationDate>October 2016</creationDate>
     <copyright>Copyright (C) 2011 - 2016 Timble CVBA (http://www.timble.net)</copyright>
     <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
     <authorEmail>support@joomlatools.com</authorEmail>
@@ -20,4 +20,18 @@
     <config>
         <fields name="params" />
     </config>
+
+    <resources>
+        <resource name="module">
+            <actions>
+                <action>add</action>
+                <action>edit</action>
+                <action>delete</action>
+                <action>publish</action>
+                <action>unpublish</action>
+                <action>archive</action>
+                <action>trash</action>
+            </actions>
+        </resource>
+    </resources>
 </extension>
