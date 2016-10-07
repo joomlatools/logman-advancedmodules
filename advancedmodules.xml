@@ -29,7 +29,6 @@
                 <action>delete</action>
                 <action>publish</action>
                 <action>unpublish</action>
-                <action>archive</action>
                 <action>trash</action>
             </actions>
         </resource>
