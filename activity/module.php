@@ -22,9 +22,15 @@ class PlgLogmanAdvancedmodulesActivityModule extends ComLogmanModelEntityActivit
 
     protected function _objectConfig(KObjectConfig $config)
     {
-        $component = JComponentHelper::getComponent('com_advancedmodules', true);
+        $adapter = $this->getObject('lib:database.adapter.mysqli');
 
-        if (!$component->enabled) {
+        $query = $this->getObject('lib:database.query.select')
+                      ->table('extensions')
+                      ->columns('COUNT(*)')
+                      ->where('element = :element')
+                      ->bind(array('element' => 'com_advancedmodules'));
+
+        if (!$adapter->select($query, KDatabase::FETCH_FIELD)) {
             $config->append(array('url' => array('admin' => 'option=com_modules&task=module.edit&id=' . $this->row)));
         }
 
