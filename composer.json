@@ -2,7 +2,7 @@
   "name": "joomlatools/plg_logman_advancedmodules",
   "type": "joomlatools-composer",
   "license": "GPLv3",
-  "description": "Handles logging of modules managed through AdvancedModules",
+  "description": "Handles logging of AdvancedModules events",
   "keywords": [
     "joomla",
     "extension",
