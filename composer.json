@@ -1,5 +1,5 @@
 {
-  "name": "joomlatools/plg_logman_advancedmodules",
+  "name": "joomlatools/logman-advancedmodules",
   "type": "joomlatools-composer",
   "license": "GPLv3",
   "description": "Handles logging of AdvancedModules events",
