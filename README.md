@@ -1,7 +1,7 @@
 LOGman AdvancedModules plugin
 ========================
 
-Plugin for integrating [Advanced Module Manager](https://https://www.regularlabs.com/extensions/advancedmodulemanager/) with LOGman. [LOGman](https://www.joomlatools.com/extensions/logman/) is a user analytics and audit trail solution for Joomla.
+Plugin for integrating [Advanced Module Manager](https://www.regularlabs.com/extensions/advancedmodulemanager/) with LOGman. [LOGman](https://www.joomlatools.com/extensions/logman/) is a user analytics and audit trail solution for Joomla.
 
 ## Installation
 
