@@ -25,7 +25,7 @@ After the package is installed, make sure to enable the plugin and that both LOG
 
 ## Supported activities
 
-The following JEvents actions are currently logged:
+The following Advanced Module Manager actions are currently logged:
 
 ### Module
 
