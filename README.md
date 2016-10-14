@@ -21,7 +21,7 @@ After downloading the package, you may install this plugin using the Joomla! ext
 
 ## Usage
 
-After the package is installed, make sure to enable the plugin and that both LOGman and JEvents are installed.
+After the package is installed, make sure to enable the plugin and that both LOGman and Advanced Module Manager are installed.
 
 ## Supported activities
 
